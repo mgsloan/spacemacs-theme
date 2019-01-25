@@ -160,7 +160,15 @@ to 'auto, tags may not be properly aligned. "
         (blue-bg-s     (if (eq variant 'dark) (if (true-color-p) "#2d4252" "#262626") (if (true-color-p) "#d1dcdf" "#d7d7ff")))
         (magenta       (if (eq variant 'dark) (if (true-color-p) "#a31db1" "#af00df") (if (true-color-p) "#a31db1" "#800080")))
         (yellow        (if (eq variant 'dark) (if (true-color-p) "#b1951d" "#875f00") (if (true-color-p) "#b1951d" "#875f00")))
-        (yellow-bg     (if (eq variant 'dark) (if (true-color-p) "#32322c" "#262626") (if (true-color-p) "#f6f1e1" "#ffffff"))))
+        (yellow-bg     (if (eq variant 'dark) (if (true-color-p) "#32322c" "#262626") (if (true-color-p) "#f6f1e1" "#ffffff")))
+
+        ;; mgsloan additions
+        (avy-bg "#000000")
+        (avy-0 "#ffaaaa")
+        (avy-1 "#aaffaa")
+        (avy-2 "#aaaaff")
+        (avy-3 "#ffaaff")
+        )
 
     (cl-loop for (cvar . val) in spacemacs-theme-custom-colors
              do (set cvar val))
@@ -222,10 +230,10 @@ to 'auto, tags may not be properly aligned. "
      `(ac-completion-face ((,class (:background ,ttip-bg :foreground ,ttip))))
 
 ;;;;; avy
-     `(avy-lead-face   ((,class (:background ,green-bg :foreground ,green))))
-     `(avy-lead-face-0 ((,class (:background ,green-bg :foreground ,yellow))))
-     `(avy-lead-face-1 ((,class (:background ,green-bg :foreground ,magenta))))
-     `(avy-lead-face-2 ((,class (:background ,green-bg :foreground ,blue))))
+     `(avy-lead-face   ((,class (:background ,avy-bg :foreground ,avy-0))))
+     `(avy-lead-face-0 ((,class (:background ,avy-bg :foreground ,avy-1))))
+     `(avy-lead-face-1 ((,class (:background ,avy-bg :foreground ,avy-2))))
+     `(avy-lead-face-2 ((,class (:background ,avy-bg :foreground ,avy-3))))
 
 ;;;;; calfw
      `(cfw:face-title               ((,class (:foreground ,head1 :height 2.0 :weight bold :inherit variable-pitch))))
